@@ -1,0 +1,19 @@
+﻿@model Whatsupp.Models.Contact
+@{
+    ViewBag.Title = "addcontact";
+}
+
+<h2>Add Contact</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.name)
+    @Html.TextBoxFor(m => m.name)
+    @Html.ValidationMessageFor(m => m.name)
+    <br />
+    @Html.LabelFor(m => m.email)
+    @Html.TextBoxFor(m => m.email)
+    @Html.ValidationMessageFor(m => m.email)
+    <br />
+    <input type="submit" value="Create Contact" />
+}

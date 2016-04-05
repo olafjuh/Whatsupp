@@ -1,0 +1,21 @@
+﻿@model Whatsupp.Models.Contact
+
+@{
+    ViewBag.Title = "editcontact";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.name)
+    @Html.TextBoxFor(m => m.name)
+    @Html.ValidationMessageFor(m => m.name)   
+    <br />
+    @Html.LabelFor(m => m.email)
+    @Html.TextBoxFor(m => m.email)
+    @Html.ValidationMessageFor(m => m.email)
+    <br />
+    <br />
+    <input type="submit" value="Edit Contact" />
+}

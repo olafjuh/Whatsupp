@@ -1,0 +1,20 @@
+﻿@model Whatsupp.Models.LoginModel1
+@{
+    ViewBag.Title = "login";
+}
+
+<h2>login</h2>
+
+@using (@Html.BeginForm())
+{
+    @Html.LabelFor(m => m.email)
+    @Html.TextBoxFor(m => m.email)
+    @Html.ValidationMessageFor(m => m.email)
+    <br />
+    @Html.LabelFor(m => m.password)
+    @Html.TextBoxFor(m => m.password)  
+    @Html.ValidationMessageFor(m => m.password)
+    <br />
+
+    <input type="submit" value="Login" />
+}

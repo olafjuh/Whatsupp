@@ -1,0 +1,24 @@
+﻿@model Whatsupp.Models.RegisterModel
+
+<h2>Add Contact</h2>
+@Html.ValidationSummary()
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.name)
+    @Html.TextBoxFor(m => m.name)
+    @Html.ValidationMessageFor(m => m.name)
+    <br />
+    @Html.LabelFor(m => m.email)
+    @Html.TextBoxFor(m => m.email)
+    @Html.ValidationMessageFor(m => m.email)
+    <br />
+    @Html.LabelFor(m => m.password)
+    @Html.TextBoxFor(m => m.password)
+    @Html.ValidationMessageFor(m => m.password)
+    <br />
+    @Html.LabelFor(m => m.confirmPassword)
+    @Html.TextBoxFor(m => m.confirmPassword)
+    @Html.ValidationMessageFor(m => m.confirmPassword)
+    <br />
+    <input type="submit" value="Create Contact" />
+}

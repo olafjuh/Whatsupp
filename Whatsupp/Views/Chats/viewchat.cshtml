@@ -1,0 +1,46 @@
+﻿@model  IEnumerable<Whatsupp.Models.Message>
+@{
+    ViewBag.Title = "viewchat";
+}
+
+<h2>viewchat</h2>
+
+@foreach (var m in Model)
+{
+    
+    switch(m.flag)
+    {
+        case true:
+            <div class="right">
+                <h2>@m.senderName @m.addedAt</h2>
+                <p>
+                    @m.message
+                </p>
+            </div>
+            break;
+        case false:
+            <div class="left">
+                <h2>
+                    @m.senderName @m.addedAt
+                </h2>
+                <p>
+                    @m.message
+                </p>
+            </div>
+            break;
+    }
+}
+@foreach (var m in Model)
+{
+    int senderId = m.senderAccountId;
+    @Html.ActionLink("Send message", "addmessage", new { id = senderId })
+    break;
+}
+
+
+
+
+
+
+
+

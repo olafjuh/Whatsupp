@@ -1,0 +1,28 @@
+﻿@model Whatsupp.Models.Message
+@{
+    
+    
+    
+}
+
+<h2>Sending a message to @ViewBag.Title</h2>
+
+<h3></h3>
+@using (Html.BeginForm("addmessage", "Chats", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.message)
+    @Html.TextBoxFor(m => m.message)
+    @Html.ValidationMessageFor(m => m.message)
+    @Html.HiddenFor(m => m.receiverName)
+    @Html.HiddenFor(m => m.receiverAccountId)
+    @Html.HiddenFor(m => m.senderAccountId)
+    @Html.HiddenFor(m => m.senderName)
+    @Html.HiddenFor(m => m.addedAt)
+    //@Html.HiddenFor(m => m.receiverName)
+    //@Html.HiddenFor(m => m.receiverName, "@ViewBag.senderName")
+    
+    <br />
+    <input type="submit" value="Send message" />
+}
+
+

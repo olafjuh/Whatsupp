@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Whatsupp.Models.Contact>
+
+    <h2>Dit zijn de huidige contacten</h2>
+
+    <h2>@Html.ActionLink("Add Contact", "AddContact", "Contacts")</h2>
+
+    <ol>
+        @foreach (var contact in Model)
+        {
+            <li><h3>@contact.Id @contact.name @contact.email -  @Html.ActionLink("Edit", "editContact", new { id = contact.Id}) - @Html.ActionLink("Remove", "removecontact", new { id = contact.Id }) @Html.ActionLink("Send message", "addmessage", "Chats", new { id = contact.ContactAccountId }, null) </h3> </li>
+           
+        }
+            
+    </ol>
+
+

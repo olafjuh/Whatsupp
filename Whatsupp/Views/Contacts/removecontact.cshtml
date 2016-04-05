@@ -1,0 +1,14 @@
+﻿@model Whatsupp.Models.Contact
+
+@{
+    ViewBag.Title = "removecontact";
+}
+
+<h2>removecontact</h2>
+
+@using (Html.BeginForm())
+{
+  <p>You are removing @Model.name with email; @Model.email, are you sure?</p>
+    <input type="submit" value="Delete Contact" />
+}
+
