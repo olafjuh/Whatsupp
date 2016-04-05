@@ -73,7 +73,7 @@ namespace Whatsupp.Models
             }
 
             //IEnumerable<Message> allmessages = ctx.AccountChats;
-            
+            //
             //    //if havent received message from contact, but have sent, show latest sent towards him.
             //if(latestmessages.Find(c => c.receiverAccountId == accountId) == null)
             //{
